@@ -1,0 +1,36 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+ <head>
+  <meta charset="UTF-8">
+  <title>top page</title>
+  <meta name="description" content="格闘技予想トップページ">
+  <link rel="stylesheet" href="{% static 'css/top-style.css' %}">
+ </head>
+
+ <body>
+   <!--背景画像-->
+   <div class="bg">
+
+   <!--コンテンツの背景-->
+    <div class="content-back">
+
+   <!--コンテンツの生成-->
+   <div class="content">
+     <h1 class="大見出し">
+       格闘技は<br>予想でもっと<br>面白くなる
+     </h1>
+     <a class="button" href="{% url 'main' %}">
+       参加する
+     </a>
+   </div>
+
+ </div><!--コンテンツの背景-->
+
+ </div><!--背景画像設定-->
+
+ </body>
+
+
+</html>
