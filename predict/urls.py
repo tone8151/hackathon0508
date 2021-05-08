@@ -4,5 +4,6 @@ from django.urls import path
 
 app_name = 'predict'
 urlpatterns = [
-    path('<int:pk>/', views.index, name='index'),
+    # path('<int:pk>/', views.index, name='index'),
+    path('', views.index, name='index'),
 ]
