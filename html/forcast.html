@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+     <meta charset="UTF-8">
+     <title>match-info</title>
+     <meta name="description" content="予想ページ">
+     <link rel="stylesheet" href="https://unpkg.com/ress/distress.min.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Goblin+One&family=Krona+One&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../css/style.css">
+ </head>
+
+ <body>
+   <header class="page-header wrapper">
+     <!--ロゴの設置-->
+       <a href="main-page.html">
+         <img class="logo" src="../images/kobusi.png" alt="ロゴ">
+       </a>
+
+     <!--ナビゲーションメニューの設置-->
+     <nav>
+       <ul class="navi-menu">
+         <li><a href="main-page.html">メインページ</a></li>
+         <li><a href="match-info.html">試合情報</a></li>
+         <li><a href="mypage.html">マイページ</a></li>
+         <li><a href="login.html">ログイン</a></li>
+         <li><a href="register.html">会員登録</a></li>
+       </ul>
+     </nav>
+   </header>
+
+   <!--試合情報見出し-->
+   <p class="head-info2">
+      刀禰有紀彦VS小島聡太　　WBA世界バンダム級タイトルマッチ
+  </p>
+
+  <!--試合写真＆BETタイトル-->
+  <div class="direction1">
+      <!--写真の設置-->
+      <img class="matchpic" src="../images/match-image01.jpg" alt="試合写真">
+      <!--説明文章-->
+      <div class="誘導">
+         <p class="中見出し1">
+            CRITICAL BET
+         </p>
+         <p class="小見出し1">
+           勝敗を勝利予想確率まで細かく予想しよう。
+         </p>
+       </div>
+   </div>
+
+   <!--勝敗予想、入力・送信ライン-->
+   <div class="input-area">
+     <!--貼り付け-->
+     <div class="cp_ipselect">
+        <select class="cp_sl06" required>
+        <option value="" hidden disabled selected></option>
+        <option value="1">刀禰有紀彦</option>
+        <option value="2">小島聡太</option>
+        </select>
+        <span class="cp_sl06_highlight"></span>
+        <span class="cp_sl06_selectbar"></span>
+        <label class="cp_sl06_selectlabel">Winner</label>
+      </div>
+<!--貼り付け終了-->
+
+        <input class="win" type="number" required="required" placeholder="0~100" min="0" max="100">
+          <p class="単位">%</p>
+      <input class="button button02" type="submit" title="投票する" value="投票する">
+  </div>
+</body>
+<p class="小見出し2">
+  情報やデータを活用して、的中率をもっと高めよう
+</p>
