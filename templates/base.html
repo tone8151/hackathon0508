@@ -20,8 +20,8 @@
             <nav>
               <ul class="navi-menu">
                 <li><a href="main-page.html">メインページ</a></li>
-                <li><a href="match-info.html">試合情報</a></li>
-                <li><a href="">マイページ</a></li>
+                <li><a href="{% url 'matches:info' %}">試合情報</a></li>
+                <li><a href="{% url 'predict:mypage' %}">マイページ</a></li>
                 {% if user.id %}
                 <li><a href="{% url 'logout' %}">ログアウト</a></li>
                 {% else %}

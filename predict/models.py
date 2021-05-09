@@ -14,7 +14,7 @@ class Post(models.Model):
         ('player2', 'player2'),
     ]
     
-    winner = models.CharField(max_length=50, choices=CHOICES, default='ali')
+    winner = models.CharField(max_length=50, choices=CHOICES, default='player1')
 
     def __str__(self):
         return self.author.username

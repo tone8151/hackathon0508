@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-    <!--大会情報バーの設置-->
     <div class="match-info">
         <p class="head-info1">
             試合情報
@@ -17,7 +16,6 @@
         </p>
     </div>
 
-    <!--ジャンル別-->
     <div class="boxing">
         <p class="ジャンル">
             BOXING
@@ -25,25 +23,22 @@
         <!--詳細の試合情報の作成-->
         {% for match in matches %}
             <div class="match-card02">
-                <div class="match-card01">
-                    <p class="player">
+                <p class="player">
                     {{ match.player1 }}
-                    VS
+                    vs
                     {{ match.player2 }}
                 </p>
                 <img class="match-image" src="{% static 'images/match-image.jpg' %}" alt="試合イメージ"></img>
                 <p class="title">
                     {{ match.title }}
                 </p>
-                <p class=explain>
+                <p class="explain">
                     {{ match.outline }}
-                    </p>
-                </div>
-                <!-- <a class="button button01" href="{% url 'predict:index' pk=match.pk %}"> -->
-                <a class="button button01" href="{% url 'predict:index' %}">
-                    予想する
-                </a>
+                </p>
             </div>
+            <a class="button button02" href="{% url 'predict:predict' match.pk %}">
+                予想する
+            </a>
         {% endfor %}
     </div>
 {% endblock %}

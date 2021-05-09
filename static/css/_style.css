@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/*ページ共通CSSの作成*/
+a {
+    text-decoration:none;
+}
+p{
+  font:bold Source Han Sans JP;
+  color: #3E3C3C;
+}
+.button{
+  padding-top:5.5px;
+  font: normal  Source Han Sans JP;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background:rgba(247, 82, 82, 1);
+  border-radius: 8px;
+  padding: 8px 21px;
+}
+.button:hover{
+  background:rgba(189, 63, 63, 1)
+}
+
+
+/*メインページCSS-----------------------
+------------------------------------------*/
+
+/*ヘッダー*/
+.page-header{
+  width:100vw;
+  height:75px;
+  background-color:#FF4949;
+}
+.logo{
+  width:33%;
+  height:33%;
+  margin-top: 8px;
+}
+.navi-menu{
+  display: flex;
+  font-size: 1.3rem;
+  list-style: none;
+  text-transform: uppercase;
+}
+.navi-menu li{
+  margin-left: 36px;
+}
+.navi-menu a{
+  color: #FFFFFF;
+}
+.navi-menu a:hover{
+  color:#BD3F3F
+}
+.page-header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*大会ページ誘導コンテンツ*/
+
+/*文章の詳細設定*/
+.中見出し{
+  font-size: 2.7rem;
+  width:73%;
+}
+.小見出し{
+  margin-top: -20px;
+  font-size:1.7rem;
+  width:73%;
+}
+/*文章とボタンの配置*/
+.誘導{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*写真の詳細設定*/
+.mac{
+  width: 66.6%;
+  height:41.7%;
+}
+/*誘導コンテンツのレイアウト*/
+.direction{
+  display: flex;
+  align-items: center;
+}
+
+/*試合情報ページCSS-----------
+--------------------------------------*/
+.head-info1{
+  font-size:1.7rem;
+  padding-top: 10px;
+}
+.infoA{
+  font-size:2.2rem;
+  color:#EC3E3E;
+  margin-top:-30px;
+}
+.match-info{
+  margin-top: -28px;
+  background-color:rgba(255, 47, 47, 0.2);
+  width:100vw;
+  height:130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*対戦カード情報CSS*/
+.player{
+  font-size: 1.5rem;
+  width:86%;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+.match-image{
+width:80%;
+margin-left: 10%;
+margin-top: -25px;
+border-radius: 8px;
+}
+.title{
+  font-size: 1.5rem;
+  width:86%;
+  margin-left: 10%;
+  margin-top: 1.8%;
+
+}
+
+.explain{
+  font-size: 1rem;
+  width:80%;
+  margin-left: 10%;
+  margin-top: -4%;
+  text-align: justify;
+}
+
+/*対戦カードレイアウト*/
+.match-card01{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+.button01{
+  margin-top: -2%;
+  margin-bottom: 3%;
+}
+
+/*対戦カードレイアウト　追加ボタン*/
+.match-card02{
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  width:25%;
+  border-radius: 8px;
+  background-color:rgba(255, 255, 255, 0.93);
+
+}
+/*ジャンル大枠*/
+.ジャンル{
+  font-size:2.2rem;
+  color: #FFFFFF;
+}
+.boxing{
+  width: 100vw;
+  height:90vh;
+  background-image:url(../images/boxing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}

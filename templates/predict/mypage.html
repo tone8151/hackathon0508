@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+   <!-- <header class="page-header wrapper"> -->
+
+     <!--ナビゲーションメニューの設置-->
+     <!-- <nav>
+       <ul class="navi-menu">
+         <li><a href="main-page.html">メインページ</a></li>
+         <li><a href="match-info.html">試合情報</a></li>
+         <li><a href="mypage.html">マイページ</a></li>
+         <li><a href="login.html">ログイン</a></li>
+         <li><a href="register.html">会員登録</a></li>
+       </ul>
+     </nav>
+   </header> -->
+
+   <!--個人成績エリア-->
+   <div class="個人成績">
+     <p class="中見出し2">
+        個人成績
+     </p>
+     <div class="scorecard">
+       <p class="cardtitle">
+         TOTAL<br>的中スコア
+      </p>
+      <!--的中スコアアウトプットエリア-->
+    <p class="score-output">
+      0.45
+    </p>
+  </div>
+</div>
+  <!--ランキングエリア-->
+   <div class="ランキング">
+     <p class="中見出し3">
+        スコア・ランキング TOP5
+     </p>
+     <ul class="rank">
+       <li class="top3">ユーザー1 スコア0.1</li>
+       <li class="top3">ユーザー2 スコア0.2</li>
+       <li class="top3">ユーザー3 スコア0.3</li>
+       <li class="not-top3">ユーザー4 スコア0.4</li>
+       <li class="not-top3">ユーザー5 スコア0.5</li>
+    </ul>
+{% endblock %}

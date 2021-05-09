@@ -1,31 +1,43 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
-from . import forms
+from .forms import PostCreateForm
 from matches.models import Match
 
-# def index(request, pk):
-#     if request.method == 'POST':
-#         form = forms.PostForm(request.POST)
-#         if form.is_valid():
-#             post = form.save(commit=False)
-#             post.author = request.user
-#             post.match_pk = pk
-#             post.save()
-#             return redirect('info/')
-#     else:
-#        form = forms.PostForm()
-#        match = get_object_or_404(Match, pk=pk)
-#     return render(request, 'predict/index.html', {'form': form, 'match': match})
-
-def index(request):
+def predict(request, match_pk):
     if request.method == 'POST':
-        form = forms.PostForm(request.POST)
+        form = PostCreateForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
+            post.match_pk = match_pk
             post.save()
-            return redirect('info/')
+            return redirect('matches:info')
     else:
-       form = forms.PostForm()
-    return render(request, 'predict/index.html', {'form': form})
+        form = PostCreateForm()
+        match = get_object_or_404(Match, pk=match_pk)
+        return render(request, 'predict/predict.html', {'form': form, 'match': match,})
 
+def mypage(request):
+    # users_record = Post.objects.filter(author=request.user)
+    # num = users_record.count()
+    # probs = users_record.values('prob')
+    # pred_winners = users_record.values('winner')
+    # winners = Match.objects.values('winner')
+
+    # matches_num = Match.objects.values('pk').count()
+
+    # win_or_lose = []
+
+    # for p in range(1, matches_num + 1):
+    #     if users_record.get(pk=p).values('winner') == Match.objects.get(pk=p).values('winner'):
+    #         win_or_lose.append(1)
+    #     else:
+    #         win_or_lose.append(0)
+
+    
+
+    # context = {
+    #     "wl": win_or_lose,
+    #     "winners": winners
+    # }
+    return render(request, 'predict/mypage.html', {})

@@ -1,3 +1,4 @@
+<!-- コメントアウトしてもエラー起きる方 -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -11,6 +12,7 @@
     <p>数値が正しくありません</p>
     {% endif %}
     <p>Player1: {{ match.player1 }} vs. Player2: {{ match.player2 }}</p>
+    <!-- ↓のformタグ、コメントアウトしてもエラー引き起こす -->
     <form method="POST" action="{% url 'index' %}">
         {% csrf_token %}
         <label>勝者</label>
