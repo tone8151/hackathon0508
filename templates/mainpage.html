@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <title>Main-page</title>
+  <meta name="description" content="格闘技予想メインページ">
+{% endblock %}
+
+{% block content %}
+  <!--大会ページ誘導コンテンツ-->
+  <div class="direction">
+      <!--写真の設置-->
+      <img class="mac" src="{% static 'images/main.jpg' %}" alt="マック写真">
+      <!--説明文章-->
+    <div class="誘導">
+        <p class="中見出し">
+          勝った、負けた。<br>それだけではつまらない
+        </p>
+        <p class="小見出し">
+          新・勝敗予想システムの導入でもっと細かく勝敗を予想しよう。
+          さらに、的中率がスコアで分かる、競える！<br>
+          格闘技のドキドキ、ハラハラをもっと楽しもう
+        </p>
+        <a class="button" href="{% url 'matches:info' %}">
+          試合情報へ
+        </a>
+    </div>
+  </div>
+{% endblock %}

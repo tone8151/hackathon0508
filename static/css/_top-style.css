@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*トップページのCSS作成*/
+
+/*背景画像を設定*/
+.bg{
+  background-image:url(../images/top.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh
+  }
+
+  /*コンテンツのレイアウト*/
+  .content{
+    margin-left:53%;
+    background-color: rgba(0, 0, 0, 0.83);
+    width:40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+/*コンテンツの設定*/
+.大見出し{
+  margin-top:34%;
+  width:84%;
+  text-align: center;
+  font:bold Arial;
+  font-size: 5rem;
+  color: #F9F9F9;
+}
+.button{
+  font: normal  Source Han Sans JP;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background:rgba(247, 82, 82, 1);
+  border-radius: 8px;
+  padding: 8px 21px;
+}
+.button:hover{
+  background:rgba(189, 63, 63, 1)
+}
+/*リンクの下線消去*/
+a {
+    text-decoration:none;
+}

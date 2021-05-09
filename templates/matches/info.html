@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>match-info</title>
+    <meta name="description" content="試合情報ページ">
+{% endblock %}
+
+{% block content %}
+    <div class="match-info">
+        <p class="head-info1">
+            試合情報
+        </p>
+        <p class="infoA">
+            NEXT MATCH
+        </p>
+    </div>
+
+    <div class="boxing">
+        <p class="ジャンル">
+            BOXING
+        </p>
+        <!--詳細の試合情報の作成-->
+        {% for match in matches %}
+            <div class="match-card02">
+                <p class="player">
+                    {{ match.player1 }}
+                    vs
+                    {{ match.player2 }}
+                </p>
+                <img class="match-image" src="{% static 'images/match-image.jpg' %}" alt="試合イメージ"></img>
+                <p class="title">
+                    {{ match.title }}
+                </p>
+                <p class="explain">
+                    {{ match.outline }}
+                </p>
+            </div>
+            <a class="button button02" href="{% url 'predict:predict' match.pk %}">
+                予想する
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

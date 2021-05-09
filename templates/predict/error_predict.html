@@ -1,0 +1,26 @@
+<!-- コメントアウトしてもエラー起きる方 -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <title>予想ページ</title>
+  <meta name="description" content="格闘技予想メインページ">
+{% endblock %}
+
+{% block content %}
+    {% if form.errors %}
+    <p>数値が正しくありません</p>
+    {% endif %}
+    <p>Player1: {{ match.player1 }} vs. Player2: {{ match.player2 }}</p>
+    <!-- ↓のformタグ、コメントアウトしてもエラー引き起こす -->
+    <form method="POST" action="{% url 'index' %}">
+        {% csrf_token %}
+        <label>勝者</label>
+        {{ form.winner }}
+        {{ form.winner.errors }}
+        <label>勝率</label>
+        {{ form.prob }}%
+        {{ form.prob.errors }}
+        <button type="submit">確定して投稿する</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/ress/distress.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="page-header wrapper">
+            <!--ロゴの設置-->
+              <a href="main-page.html">
+                <img class="logo" src="{% static 'images/kobusi.png' %}" alt="ロゴ">
+              </a>
+       
+            <!--ナビゲーションメニューの設置-->
+            <nav>
+              <ul class="navi-menu">
+                <li><a href="main-page.html">メインページ</a></li>
+                <li><a href="{% url 'matches:info' %}">試合情報</a></li>
+                <li><a href="{% url 'predict:mypage' %}">マイページ</a></li>
+                {% if user.id %}
+                <li><a href="{% url 'logout' %}">ログアウト</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">ログイン</a></li>
+                <li><a href="{% url 'create_account' %}">会員登録</a></li>
+                {% endif %}
+              </ul>
+            </nav>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
